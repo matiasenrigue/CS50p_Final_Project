@@ -30,34 +30,6 @@ player2 = get_valid_player_name()
 
 
 
-def main():
-    #Start of the Match
-    print(colored("\n", "white", "on_cyan"), end="")
-    uno = "\n\n         Welcome to this Tenis match\n"
-    dos = f"         {player1} will pay against {player2}\n"
-    tres = f"\n         Controls:"
-    cuatro = f"\n         - 1: if {player1} won the point:"
-    cinco = f"\n         - 2: if {player2} won the point:"
-    seis = f"\n         - d: to exit the game:"
-    tot = uno + dos
-    print(colored(tot, "cyan", "on_white", attrs=["bold"]), end="")
-
-    #Match is played
-    victory = match_counter()
-
-    #End of the Match
-    if victory == "player 1":
-        winner = player1
-    elif victory == "player 2":
-        winner = player2
-    
-    print(colored("\n", "white", "on_cyan"), end="")
-    frase_match = f"\n\n         {winner} wins the Match\n"
-    print(colored(frase_match, "cyan", "on_white", attrs=["bold"]), end="")
-    print(colored("\n", "white", "on_cyan"))
-    print("\n\n")
-
-
 def point_scored(punto):
     """
     This functions returns a tupple (0, 1) or (1,0) depending on who scored the point
@@ -318,7 +290,33 @@ def match_counter():
             return "player 2"
        
 
-                
+
+def main():
+    #Start of the Match
+    print(colored("\n", "white", "on_cyan"), end="")
+    uno = "\n\n         Welcome to this Tenis match\n"
+    dos = f"         {player1} will pay against {player2}\n"
+    tres = f"\n         Controls:"
+    cuatro = f"\n         - 1: if {player1} won the point:"
+    cinco = f"\n         - 2: if {player2} won the point:"
+    seis = f"\n         - d: to exit the game:"
+    tot = uno + dos
+    print(colored(tot, "cyan", "on_white", attrs=["bold"]), end="")
+
+    #Match is played
+    victory = match_counter()
+
+    #End of the Match
+    if victory == "player 1":
+        winner = player1
+    elif victory == "player 2":
+        winner = player2
+    
+    print(colored("\n", "white", "on_cyan"), end="")
+    frase_match = f"\n\n         {winner} wins the Match\n"
+    print(colored(frase_match, "cyan", "on_white", attrs=["bold"]), end="")
+    print(colored("\n", "white", "on_cyan"))
+    print("\n\n")
 
 
 if __name__ == "__main__":
